@@ -50,11 +50,11 @@ app = webapp2.WSGIApplication([
     ('/', MainPage), #this maps the root url to the MainPage Handler
 ], debug=True)
 
-def main():
-    util.run_wsgi_app(app)
-
-if __name__ == '__main__':
-    main()
+# def main():
+#     util.run_wsgi_app(app)
+#
+# if __name__ == '__main__':
+#     main()
 # import webapp2
 # import jinja2
 # import os
