@@ -1,17 +1,29 @@
 import webapp2
-import jinja2
-import os
-from google.appengine.api import urlfetch
-import json
-import random
 
+#the handler section
+class MainPage(webapp2.RequestHandler):
+    def get(self): #for a GET request
+        self.response.write('Hello, World!') #the response
 
-config = {}
-config['webapp2_extras.sessions'] = {
-    'secret_key': 'my-super-secret-key',
-}
-
+#the app configuration section
 app = webapp2.WSGIApplication([
-    ('/', TitleScreen),
-], config=config,
-   debug=True)
+    ('/', MainPage), #this maps the root url to the MainPage Handler
+], debug=True)
+
+# import webapp2
+# import jinja2
+# import os
+# from google.appengine.api import urlfetch
+# import json
+# import random
+#
+#
+# config = {}
+# config['webapp2_extras.sessions'] = {
+#     'secret_key': 'my-super-secret-key',
+# }
+#
+# app = webapp2.WSGIApplication([
+#     ('/', TitleScreen),
+# ], config=config,
+#    debug=True)
