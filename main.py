@@ -1,9 +1,10 @@
+# from flask import Flask, render_template, request
+# from flask import flask
+
 import webapp2
 import jinja2
 import os
 from webapp2_extras import sessions
-# from flask import Flask, render_template, request
-# from flask import flask
 
 class BaseHandler(webapp2.RequestHandler):
     def dispatch(self):
@@ -64,6 +65,17 @@ class Results(BaseHandler):
 
         self.response.write(results_template.render(name=name))
 
+config = {}
+config['webapp2_extras.sessions'] = {
+    'secret_key': 'my-super-secret-key',
+}
+
+app = webapp2.WSGIApplication([
+    ('/', MainPage),
+    ('/results', Results)
+], config=config,
+   debug=True)
+
 # def main():
 #     util.run_wsgi_app(app)
 #
@@ -104,14 +116,3 @@ class Results(BaseHandler):
 #         email=email,
 #         site=site,
 #         comments=comments)
-
-config = {}
-config['webapp2_extras.sessions'] = {
-    'secret_key': 'my-super-secret-key',
-}
-
-app = webapp2.WSGIApplication([
-    ('/', MainPage),
-    ('/results', Results)
-], config=config,
-   debug=True)
