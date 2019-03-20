@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Submit a form</title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+  </head>
+  <body>
+    <div id="container">
+      <div class="pagetitle">
+        <h1>Menu</h1>
+        <h1>Submit a form</h1>
+      </div>
+      <div id="main">
+         <!-- action="{{ url_for('submitted_form') }}" -->
+        <form action="/results" method="post" >
+          <p>Main Menu</p>
+          <label for="name">Name:</label>
+          <input type="text" name="name"></input>
+          <!-- <label for="email">Email address:</label>
+          <input type="email" name="email"><br />
+          <label for="site_url">Website URL:</label>
+          <input type="url" name="site_url"><br />
+          <label for="comments">Comments:</label>
+          <textarea name="comments"></textarea><br /> -->
+          <input type="submit"></input>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
