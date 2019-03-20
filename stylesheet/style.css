@@ -1,13 +1,11 @@
-.pagetitle {
+body {
     /*color: blue;*/
     background-image: url(../images/website_background.jpg);
-    background-repeat: repeat;
+    /*background-repeat: repeat;
     /*background-attachment: fixed;
 
-    background-size: 100%;*/
-    width: 40vw;
-	  min-width: 550px;
-	  min-height: 100vh;
-	  margin-left: 0%;
-	  margin-right: 0%;
+    background-size: 100%;
+    width: 50%;
+	  min-width: 50%;
+	  min-height: 100%;*/
 }
