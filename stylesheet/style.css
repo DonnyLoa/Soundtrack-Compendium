@@ -1,8 +1,9 @@
 .pagetitle {
     /*color: blue;*/
     background-image: url(../images/website_background.jpg);
-    /*background-attachment: fixed;
     background-repeat: repeat;
+    /*background-attachment: fixed;
+
     background-size: 100%;*/
     width: 40vw;
 	  min-width: 550px;
