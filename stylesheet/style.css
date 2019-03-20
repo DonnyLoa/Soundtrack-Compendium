@@ -1,3 +1,8 @@
 .pagetitle {
     color: blue;
+    background-image: url(../images/website_background.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: auto;
+
 }
